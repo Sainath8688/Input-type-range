@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range input example</title>
+</head>
+<body>
+        <h2>Volume Control</h2><!-- Heading for the volume control section -->
+        <label for="volume">Volume</label><!-- Label for the range input -->
+        <input type="range" name="volume" step="1" min="0" max="100" id="volume" oninput="UpdateVolumeLabel(this.value)"><!-- Range input element -->
+        <span id="volume-label" >50</span><!-- Span to display the current value of the slider -->
+  
+  
+    <script>
+        function UpdateVolumeLabel(value) {
+            document.getElementById('volume-label').textContent=value;// Update the span with the current value of the slider
+        }
+    </script>
+</body>
+</html>
